@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+#LanguageSwitcher ul {
+	list-style: none;
+}
+#LanguageSwitcher {
+	z-index: 100;
+	width: 56px;
+	height: 24px;
+	position: absolute;
+	cursor: pointer;
+	margin-left: 914px;
+	margin-top: 41px;
+	background-color: #515151;
+	padding:6px;
+}
+#LanguageSwitcher form {
+	display: none;
+}
+#LanguageSwitcher a {
+	display: block;
+	width: 56px;
+	height: 24px;
+	background-repeat: no-repeat;
+}
+#LanguageSwitcher li a:hover {
+	opacity: 0.7;
+}
+#LanguageSwitcher a.current:link,
+#LanguageSwitcher a.current:visited,
+#LanguageSwitcher a.current:active {
+	position: relative; /* sets the initial position for the trigger arrow */
+	
+}
+#LanguageSwitcher a.current:link span.trigger,
+#LanguageSwitcher a.current:visited span.trigger {
+	background: url(../images/flag/arow.png) no-repeat left top;
+	width:13px;
+	height:12px;
+	float:left;
+	margin-left:41px;
+	margin-top:7px;
+}
+#LanguageSwitcher ul.dropdown {
+	display: none;
+	position: absolute;
+	left: 0;
+	margin-top:6px;
+}
+#LanguageSwitcher ul.dropdown li {
+	background-color: #515151;
+	padding:3px 6px;
+}
+#en {
+	background-image: url(../images/flag/01.jpg);
+}
+#fr {
+	background-image: url(../images/flag/04.jpg);
+}
+#de {
+	background-image: url(../images/flag/02.jpg);
+}
+#it {
+	background-image: url(../images/flag/04.jpg);
+}
+#es {
+	background-image: url(../images/flag/03.jpg);
+}
