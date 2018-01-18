@@ -3407,7 +3407,7 @@ zoom = 1;
 		
 				
 		
-				$.post('http://www.demoets.com/p/product_cust/index/ajax/',{mode:'get-product-image',pid:pid},function(data){
+				$.post('#',{mode:'get-product-image',pid:pid},function(data){
 		
 					
 		
@@ -5598,7 +5598,7 @@ zoom = 1;
 		
 			
 		
-			var ajaxurl = 'http://www.demoets.com/p/product_cust/index/ajax/';
+			var ajaxurl = '#';
 		
 			
 		
@@ -5614,7 +5614,7 @@ zoom = 1;
 		
 			function viewcolorproduct(id){
 		
-				$.post('http://www.demoets.com/p/product_cust/index/ajax/',{mode:'view-color-product',id:id},function(data){
+				$.post('#',{mode:'view-color-product',id:id},function(data){
 		
 					$('.color-view-container').html(data);
 					getpriceproduct(id);
@@ -5623,7 +5623,7 @@ zoom = 1;
 			}
 			
 			function getpriceproduct(id){
-				$.post('http://www.demoets.com/p/product_cust/index/ajax/',{mode:'product-price',id:id},function(data){
+				$.post('#',{mode:'product-price',id:id},function(data){
 					var obj = $.parseJSON(data);
 					//alert(obj.pr_ship_price);
 					$('.select-menu').html(obj.pr_qty);
@@ -5678,7 +5678,7 @@ zoom = 1;
 		
 			function getcategoryproduct(type){
 		
-				$.post('http://www.demoets.com/p/product_cust/index/ajax/',{mode:'get-category-product',type:type},function(data){
+				$.post('#',{mode:'get-category-product',type:type},function(data){
 		
 					$('.image-category-product').html(data);
 		
@@ -5688,7 +5688,7 @@ zoom = 1;
 		
 			function getproduct(type,cid){
 		
-				$.post('http://www.demoets.com/p/product_cust/index/ajax/',{mode:'get-product',type:type, id:cid},function(data){
+				$.post('#',{mode:'get-product',type:type, id:cid},function(data){
 		
 					$('.product-sub-right').html(data);
 		
@@ -5730,7 +5730,7 @@ zoom = 1;
 				
 		    $('#LanguageSwitcher li').click(function(){
 				var lang = $(this).children('a').attr('id');
-				$.post('http://www.demoets.com/p/product_cust/index/ajax/',{mode:'language-change',language:lang},function(data){
+				$.post('#',{mode:'language-change',language:lang},function(data){
 					window.location.reload();
 				});
 				
@@ -5744,7 +5744,7 @@ zoom = 1;
 			//		  html2canvas($('#tshirt_main'), {
 		    //  	            onrendered: function(canvas) {
 			//				var dataURL = canvas.toDataURL("image/png");
-			//				$.post('http://www.demoets.com/p/product_cust/index/ajax/',{mode:'get-save',image:dataURL},function(data){
+			//				$.post('#',{mode:'get-save',image:dataURL},function(data){
 			//					//Popup.hide('savelaterimage');
 			//					$('#image_front_side').val(data);
 			//					});

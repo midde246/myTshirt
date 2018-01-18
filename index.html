@@ -3428,7 +3428,7 @@ $('.text_cross').live('click',function(){
 
 		
 
-		$.post('http://www.demoets.com/p/product_cust/index/ajax/',{mode:'get-product-image',pid:pid},function(data){
+		$.post('#',{mode:'get-product-image',pid:pid},function(data){
 
 			
 
@@ -5608,7 +5608,7 @@ $(document).ready(function()
 
 	
 
-	var ajaxurl = 'http://www.demoets.com/p/product_cust/index/ajax/';
+	var ajaxurl = '#';
 
 	
 
@@ -5624,7 +5624,7 @@ $(document).ready(function()
 
 	function viewcolorproduct(id){
 
-		$.post('http://www.demoets.com/p/product_cust/index/ajax/',{mode:'view-color-product',id:id},function(data){
+		$.post('#',{mode:'view-color-product',id:id},function(data){
 
 			$('.color-view-container').html(data);
 			getpriceproduct(id);
@@ -5633,7 +5633,7 @@ $(document).ready(function()
 	}
 	
 	function getpriceproduct(id){
-		$.post('http://www.demoets.com/p/product_cust/index/ajax/',{mode:'product-price',id:id},function(data){
+		$.post('#',{mode:'product-price',id:id},function(data){
 			var obj = $.parseJSON(data);
 			//alert(obj.pr_ship_price);
 			$('.select-menu').html(obj.pr_qty);
@@ -5688,7 +5688,7 @@ $(document).ready(function()
 
 	function getcategoryproduct(type){
 
-		$.post('http://www.demoets.com/p/product_cust/index/ajax/',{mode:'get-category-product',type:type},function(data){
+		$.post('#',{mode:'get-category-product',type:type},function(data){
 
 			$('.image-category-product').html(data);
 
@@ -5698,7 +5698,7 @@ $(document).ready(function()
 
 	function getproduct(type,cid){
 
-		$.post('http://www.demoets.com/p/product_cust/index/ajax/',{mode:'get-product',type:type, id:cid},function(data){
+		$.post('#',{mode:'get-product',type:type, id:cid},function(data){
 
 			$('.product-sub-right').html(data);
 
@@ -5740,7 +5740,7 @@ $(document).ready(function()
 		
     $('#LanguageSwitcher li').click(function(){
 		var lang = $(this).children('a').attr('id');
-		$.post('http://www.demoets.com/p/product_cust/index/ajax/',{mode:'language-change',language:lang},function(data){
+		$.post('#',{mode:'language-change',language:lang},function(data){
 			window.location.reload();
 		});
 		
@@ -5754,7 +5754,7 @@ $(document).ready(function()
 	//		  html2canvas($('#tshirt_main'), {
     //  	            onrendered: function(canvas) {
 	//				var dataURL = canvas.toDataURL("image/png");
-	//				$.post('http://www.demoets.com/p/product_cust/index/ajax/',{mode:'get-save',image:dataURL},function(data){
+	//				$.post('#',{mode:'get-save',image:dataURL},function(data){
 	//					//Popup.hide('savelaterimage');
 	//					$('#image_front_side').val(data);
 	//					});
